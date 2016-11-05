@@ -1,20 +1,16 @@
-# Web Application Boilerplate
+# Splate
+
+A SaaS Boilerplate
 
 ## Installation
 
 Create new project
 
 ```
-composer create-project cleaniquecoders/web-app-boilerplate
+composer create-project cleaniquecoders/splate
 ```
 
-Go into application directory and install all dependencies.
-
-```
-cd web-app-boilerplate && composer install
-```
-
-Update your database connection in `.env`.
+Update your database connection and email configuration in `.env`.
 
 ## Login with Facebook
 
