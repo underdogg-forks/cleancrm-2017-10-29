@@ -5,17 +5,20 @@
     </div>
     <div class="content">
         <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
-                <img src="https://avatars1.githubusercontent.com/u/3793708?v=3&s=200" class="img-polaroid center-block">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <p class="text-center"><i class="fa fa-paint-brush fa-4x img-polaroid center-block"></i></p>
+                <hr>
                 <p class="category text-center">Custom Themes for Every User Role</p>
             </div>
-            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
-                <img src="https://avatars1.githubusercontent.com/u/3793708?v=3&s=200" class="img-polaroid center-block">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <p class="text-center"><i class="fa fa-usd fa-4x img-polaroid center-block"></i></p>
+                <hr>
                 <p class="category text-center">Integrated with Awesome Payment Gateway, BillPlz</p>
             </div>
-            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
-                <img src="https://avatars1.githubusercontent.com/u/3793708?v=3&s=200" class="img-polaroid center-block">
-                <p class="category text-center">Easy Extensible Module</p>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <p class="text-center"><i class="fa fa-list-alt fa-4x img-polaroid center-block"></i></p>
+                <hr>
+                <p class="category text-center">Manage your subscription package</p>
             </div>
         </div>
 
