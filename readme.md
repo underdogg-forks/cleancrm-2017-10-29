@@ -1,6 +1,6 @@
 # Splate
 
-A SaaS Boilerplate
+A SaaS Boilerplate to speed up your SaaS Application Developement
 
 ## Installation
 
