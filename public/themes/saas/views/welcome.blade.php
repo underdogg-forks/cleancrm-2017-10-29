@@ -1,14 +1,21 @@
 <div class="card">
     <div class="header">
-        <h4 class="title">S.plate</h4>
-        <p class="category">Your SaaS Boilerplate, for Malaysian, by Malaysian</p>
+        <h4 class="title">{{ config('app.name') }}</h4>
+        <p class="category">{{ config('app.description') }}</p>
     </div>
     <div class="content">
         <div class="row">
             <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
-
-                <img src="https://avatars1.githubusercontent.com/u/3793708?v=3&s=200" class="img-polaroid">
+                <img src="https://avatars1.githubusercontent.com/u/3793708?v=3&s=200" class="img-polaroid center-block">
+                <p class="category text-center">Custom Themes for Every User Role</p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                <img src="https://avatars1.githubusercontent.com/u/3793708?v=3&s=200" class="img-polaroid center-block">
                 <p class="category text-center">Integrated with Awesome Payment Gateway, BillPlz</p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                <img src="https://avatars1.githubusercontent.com/u/3793708?v=3&s=200" class="img-polaroid center-block">
+                <p class="category text-center">Easy Extensible Module</p>
             </div>
         </div>
 

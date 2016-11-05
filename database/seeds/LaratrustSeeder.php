@@ -66,7 +66,6 @@ class LaratrustSeeder extends Seeder
                 \App\Profile::create([
                     'user_id' => $u->id,
                     'phone' => $faker->regexify('[0-9]{12}'),
-                    'ic' => $faker->regexify('[0-9]{6}[0-9]{2}[0-9]{4}'),
                 ]);
             });
         }

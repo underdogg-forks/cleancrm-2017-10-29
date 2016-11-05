@@ -14,6 +14,8 @@ return [
 
     'name' => 'splate',
 
+    'description' => 'Your SaaS Boilerplate, for Malaysian, by Malaysian',
+
     'themes' => [
         'default' => [
             'name' => 'saas',
