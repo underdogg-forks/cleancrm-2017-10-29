@@ -10,7 +10,7 @@ Create new Splate project
 composer create-project cleaniquecoders/splate
 ```
 
-Update your database connection and email configuration in `.env`.
+Update database connection and email configuration in `.env`.
 
 ## Login with Facebook
 
