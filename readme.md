@@ -4,7 +4,7 @@ A SaaS Boilerplate
 
 ## Installation
 
-Create new project
+Create new Splate project
 
 ```
 composer create-project cleaniquecoders/splate
