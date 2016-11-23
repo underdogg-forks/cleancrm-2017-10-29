@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b95f4ca6528bfca4b794c3a6bb693258",
-    "content-hash": "af95f033e6642e89f39140fcdc204371",
+    "hash": "3e2b736a9704e3f121deec375aca43a3",
+    "content-hash": "017c73923521489952be5a8888fe1ee7",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -62,21 +62,24 @@
             "time": "2015-11-09 22:51:51"
         },
         {
-            "name": "cleaniquecoders/artisan-extended",
-            "version": "v1.0.3",
+            "name": "cleaniquecoders/setting",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/cleaniquecoders/artisan-extended.git",
-                "reference": "f344ddc8080d7a79a32cfa791550af0a26ee7e6a"
+                "url": "https://github.com/cleaniquecoders/setting.git",
+                "reference": "74676a98d87e12fce5474aa5a562519a35c09c73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cleaniquecoders/artisan-extended/zipball/f344ddc8080d7a79a32cfa791550af0a26ee7e6a",
-                "reference": "f344ddc8080d7a79a32cfa791550af0a26ee7e6a",
+                "url": "https://api.github.com/repos/cleaniquecoders/setting/zipball/74676a98d87e12fce5474aa5a562519a35c09c73",
+                "reference": "74676a98d87e12fce5474aa5a562519a35c09c73",
                 "shasum": ""
             },
             "type": "library",
             "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
                 "psr-4": {
                     "CleaniqueCoders\\": "src/"
                 }
@@ -91,8 +94,8 @@
                     "email": "nasrulhazim.m@gmail.com"
                 }
             ],
-            "description": "Laravel Artisan Extended Commands",
-            "time": "2016-11-21 15:05:24"
+            "description": "Laravel Setting Helper",
+            "time": "2016-11-23 07:55:28"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -3146,6 +3149,39 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "cleaniquecoders/artisan-extended",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cleaniquecoders/artisan-extended.git",
+                "reference": "f344ddc8080d7a79a32cfa791550af0a26ee7e6a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cleaniquecoders/artisan-extended/zipball/f344ddc8080d7a79a32cfa791550af0a26ee7e6a",
+                "reference": "f344ddc8080d7a79a32cfa791550af0a26ee7e6a",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CleaniqueCoders\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nasrul Hazim",
+                    "email": "nasrulhazim.m@gmail.com"
+                }
+            ],
+            "description": "Laravel Artisan Extended Commands",
+            "time": "2016-11-21 15:05:24"
+        },
         {
             "name": "doctrine/instantiator",
             "version": "1.0.5",

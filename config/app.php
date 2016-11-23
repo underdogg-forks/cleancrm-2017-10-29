@@ -186,7 +186,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Teepluss\Theme\ThemeServiceProvider::class,
         CleaniqueCoders\Providers\ArtisanExtendedProvider::class,
-
+        CleaniqueCoders\Providers\SettingServiceProvider::class,
         /*
          * Application Service Providers...
          */
