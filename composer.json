@@ -50,7 +50,8 @@
             "Illuminate\\Foundation\\ComposerScripts::postInstall",
             "php artisan key:generate",
             "php artisan jwt:generate",
-            "php artisan clear:cache"
+            "php artisan clear:cache",
+            "php artisan splate:database"
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
