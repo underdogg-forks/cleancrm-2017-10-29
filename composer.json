@@ -51,7 +51,9 @@
             "php artisan key:generate",
             "php artisan jwt:generate",
             "php artisan clear:cache",
-            "php artisan splate:database"
+            "php artisan splate:database",
+            "npm install",
+            "gulp"
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
