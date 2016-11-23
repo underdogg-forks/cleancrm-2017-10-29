@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace Splate\Http\Middleware;
 
 use Auth;
 use Closure;

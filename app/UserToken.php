@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Splate;
 
 use Illuminate\Database\Eloquent\Model;
 

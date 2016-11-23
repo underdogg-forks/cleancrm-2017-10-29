@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Listeners;
+namespace Splate\Listeners;
 
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Queue\InteractsWithQueue;
@@ -27,6 +27,6 @@ class SendAccountActivation
      */
     public function handle(Registered $event)
     {
-        $event->user->notify(new \App\Notifications\AccountActivation($event->user));
+        $event->user->notify(new \Splate\Notifications\AccountActivation($event->user));
     }
 }

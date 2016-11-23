@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Splate\Http\Controllers;
 
 use Auth;
 use Illuminate\Http\Request;
@@ -9,7 +9,7 @@ class AccountController extends Controller
 {
     public function activate(Request $request, $token)
     {
-        $userToken = \App\UserToken::where('token', $token)->first();
+        $userToken = \Splate\UserToken::where('token', $token)->first();
 
         if ($userToken) {
             $userToken->status = 1;

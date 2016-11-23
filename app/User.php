@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Splate;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -31,11 +31,11 @@ class User extends Authenticatable
 
     public function profile()
     {
-        return $this->hasOne('App\Profile');
+        return $this->hasOne('Splate\Profile');
     }
 
     public function activation()
     {
-        return $this->hasOne('App\UserToken');
+        return $this->hasOne('Splate\UserToken');
     }
 }

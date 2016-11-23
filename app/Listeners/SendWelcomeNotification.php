@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Listeners;
+namespace Splate\Listeners;
 
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Queue\InteractsWithQueue;
@@ -26,6 +26,6 @@ class SendWelcomeNotification
      */
     public function handle(Registered $event)
     {
-         $event->user->notify(new \App\Notifications\Welcome($event->user));
+         $event->user->notify(new \Splate\Notifications\Welcome($event->user));
     }
 }

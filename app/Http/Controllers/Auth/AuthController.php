@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Splate\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Profile;
-use App\User;
+use Splate\Http\Controllers\Controller;
+use Splate\Profile;
+use Splate\User;
 use Illuminate\Http\Request;
 use JWTAuth;
 use Socialite;
@@ -42,7 +42,7 @@ class AuthController extends Controller
                 ]);
 
                 // set default role
-                $role = \App\Role::find(4);
+                $role = \Splate\Role::find(4);
                 $u->attachRole($role);
 
                 Profile::create([

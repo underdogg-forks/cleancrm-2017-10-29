@@ -11,7 +11,7 @@
 |
  */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(Splate\User::class, function (Faker\Generator $faker) {
     static $password;
 
     return [
@@ -22,7 +22,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Profile::class, function (Faker\Generator $faker) {
+$factory->define(Splate\Profile::class, function (Faker\Generator $faker) {
     return [
         'user_id' => $faker->randomElement(range(1, 100)),
         'phone' => $faker->regexify('[0-9]{12}'),

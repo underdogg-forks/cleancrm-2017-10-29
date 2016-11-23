@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Splate;
 
 use Laratrust\LaratrustRole;
 

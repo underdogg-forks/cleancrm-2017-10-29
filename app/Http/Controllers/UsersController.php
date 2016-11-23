@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Splate\Http\Controllers;
 
-use App\Role;
-use App\RoleUser;
-use App\User;
+use Splate\Role;
+use Splate\RoleUser;
+use Splate\User;
 use Auth;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 use Illuminate\Http\Request;
