@@ -19,7 +19,7 @@ Route::group(['middleware' => 'theme:saas,frontend'], function () {
     Route::get('/account/activate/{token}', 'AccountController@activate');
 });
 
-Route::group(['middleware' => ['theme:default,blank']], function () {
+Route::group(['middleware' => ['theme:saas,frontend']], function () {
     Auth::routes();
 });
 
@@ -32,13 +32,14 @@ Route::group(
         ],
     ], function () {
         Route::get('dashboard', 'HomeController@index');
-
         // Administrator, Trainer and Facilitator only
-        Route::group(['middleware' => ['role:administrator|trainer|facilitator']], function () {
+        Route::group(['middleware' => ['role:administrator']], function () {
             Route::resource('users', 'UsersController');
         });
     });
-
+Route::group(['middleware' => []], function () {
+    Route::resource('packages', 'PackageController');
+});
 // Handle Socialite Redirection & Callback
 Route::get('auth/facebook', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/facebook/callback', 'Auth\AuthController@handleProviderCallback');

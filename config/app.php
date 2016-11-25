@@ -19,7 +19,7 @@ return [
     'themes' => [
         'default' => [
             'name' => 'saas',
-            'layout' => 'default',
+            'layout' => 'frontend',
         ],
         'admin' => [
             'name' => 'admin',

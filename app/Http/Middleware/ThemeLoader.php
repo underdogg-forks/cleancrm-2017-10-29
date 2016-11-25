@@ -23,7 +23,7 @@ class ThemeLoader
         if ($request->isMethod('GET')) {
             // get the original content
             $originalContent = $response->getOriginalContent();
-
+            dd($originalContent);
             // get the view name
             $view_name = $originalContent->getName();
 
