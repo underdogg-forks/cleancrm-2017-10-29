@@ -28,19 +28,27 @@ Route::group(
         'middleware' => [
             'active',
             'auth',
-            'theme:' . config('app.themes.admin.name') . ',' . config('app.themes.admin.layout'),
-            'subscription',
         ],
     ], function () {
-        Route::get('dashboard', 'HomeController@index');
+
+        Route::group(
+            [
+                'middleware' => [
+                    'subscription',
+                    'theme:' . config('app.themes.admin.name') . ',' . config('app.themes.admin.layout'),
+                ],
+            ], function () {
+                Route::get('dashboard', 'HomeController@index');
+            });
+
         // Administrator, Trainer and Facilitator only
         Route::group(['middleware' => ['role:administrator']], function () {
             Route::resource('users', 'UsersController');
+            Route::resource('packages', 'PackageController');
         });
     });
 
-Route::group(['middleware' => []], function () {
-    Route::resource('packages', 'PackageController');
+Route::group(['middleware' => ['auth']], function () {
     Route::get('subscribe/{id}', 'PackageController@subscribe')->name('packages.subscribe');
     Route::get('unsubscribed', 'PackageController@unsubscribed')->name('packages.unsubscribed');
     Route::get('expired', 'PackageController@expired')->name('packages.expired');

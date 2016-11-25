@@ -20,7 +20,7 @@ class LaratrustSeeder extends Seeder
 
         foreach ($config as $key => $modules) {
             // Create a new role
-            $role = \App\Role::create([
+            $role = \Splate\Role::create([
                 'name' => $key,
                 'display_name' => ucfirst($key),
                 'description' => ucfirst($key),
@@ -35,7 +35,7 @@ class LaratrustSeeder extends Seeder
                 foreach ($permissions as $p => $perm) {
                     $permissionValue = $mapPermission->get($perm);
 
-                    $permission = \App\Permission::firstOrCreate([
+                    $permission = \Splate\Permission::firstOrCreate([
                         'name' => $module . '-' . $permissionValue,
                         'display_name' => ucfirst($permissionValue) . ' ' . ucfirst($module),
                         'description' => ucfirst($permissionValue) . ' ' . ucfirst($module),
@@ -52,7 +52,7 @@ class LaratrustSeeder extends Seeder
             }
 
             // Create default user for each role
-            $user = \App\User::create([
+            $user = \Splate\User::create([
                 'name' => ucfirst($key),
                 'email' => $key . '@app.com',
                 'password' => bcrypt('password'),
@@ -61,9 +61,9 @@ class LaratrustSeeder extends Seeder
             $user->attachRole($role);
 
             // create total of 100 users
-            factory(\App\User::class, 96)->create()->each(function ($u) use ($role, $faker) {
+            factory(\Splate\User::class, 96)->create()->each(function ($u) use ($role, $faker) {
                 $u->attachRole($role);
-                \App\Profile::create([
+                \Splate\Profile::create([
                     'user_id' => $u->id,
                     'phone' => $faker->regexify('[0-9]{12}'),
                 ]);
@@ -80,11 +80,11 @@ class LaratrustSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         DB::table('permission_role')->truncate();
         DB::table('role_user')->truncate();
-        \App\User::truncate();
-        \App\Role::truncate();
-        \App\Permission::truncate();
-        \App\Profile::truncate();
-        \App\UserToken::truncate();
+        \Splate\User::truncate();
+        \Splate\Role::truncate();
+        \Splate\Permission::truncate();
+        \Splate\Profile::truncate();
+        \Splate\UserToken::truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }

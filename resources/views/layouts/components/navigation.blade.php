@@ -41,9 +41,12 @@
                             <li>
                                 <a href="{{ url('/dashboard') }}">Dashboard</a>
                             </li>
-                            @ability('administrator,trainer,facilitator','users-index')
+                            @ability('administrator','users-index,packages-index')
                                 <li>
                                     <a href="{{ route('users.index') }}">User Manager</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('packages.index') }}">Package Manager</a>
                                 </li>
                             @endability
                             <li>

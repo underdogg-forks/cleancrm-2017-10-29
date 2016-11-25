@@ -4,6 +4,7 @@ return [
     'role_structure' => [
         'administrator' => [
             'users' => 'i,s,e,c,r,u,d',
+            'packages' => 'i,s,e,c,r,u,d',
             'profile' => 'r,u',
         ],
         'public' => [
