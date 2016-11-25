@@ -13,7 +13,8 @@
         "tymon/jwt-auth": "0.5.*",
         "laravelcollective/html": "^5.3.0",
         "teepluss/theme": "^2.0",
-        "cleaniquecoders/setting": "^1.0"
+        "cleaniquecoders/setting": "^1.0",
+        "cleaniquecoders/artisan-extended": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
