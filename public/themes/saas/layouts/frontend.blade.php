@@ -36,6 +36,9 @@
         .main-panel {
             width: calc(100% - 0px);
         }
+        .navbar-brand, h1,h2,h3,h4,h5,h6 {
+            color: #CC0000 !important;
+        }
     </style>
 </head>
 <body>

@@ -13,7 +13,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         @foreach(config('nav.frontend') as $menu)
                         <li>
-                            <a href="{{ $menu['url'] }}" class="dropdown-toggle" data-toggle="dropdown">
+                            <a href="{{ url($menu['url']) }}">
                                 @if( isset($menu['icon']) )
                                     <i class="{!! $menu['icon'] !!}"></i>
                                 @endif
