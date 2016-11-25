@@ -15,7 +15,7 @@ class CreatePackageUsersTable extends Migration
     {
         Schema::create('package_user', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('subscription_id')->unsigned();
+            $table->integer('package_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->integer('status')->default(1); // 0 is inactive, 1 is active
             $table->dateTime('subscribed_at');

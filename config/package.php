@@ -16,7 +16,7 @@ return [
     ],
     'currency' => 'MYR',
     'redirect' => [
-        'success' => 'home', // URI
+        'success' => '/dashboard', // URI
         'failed' => '/',
     ],
 ];

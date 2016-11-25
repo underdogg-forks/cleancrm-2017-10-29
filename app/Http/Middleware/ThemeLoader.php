@@ -20,10 +20,10 @@ class ThemeLoader
     {
         $response = $next($request);
 
-        if ($request->isMethod('GET')) {
+        if ($request->isMethod('GET') && get_class($response) != 'Illuminate\Http\RedirectResponse') {
             // get the original content
             $originalContent = $response->getOriginalContent();
-            dd($originalContent);
+
             // get the view name
             $view_name = $originalContent->getName();
 

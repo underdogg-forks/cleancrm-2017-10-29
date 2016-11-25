@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class PackageUser extends Model
 {
-    protected $table = 'packaged_user';
+    protected $table = 'package_user';
 
     protected $fillable = [
-        'packaged_id', 'user_id', 'status', 'subscribed_at', 'expired_at',
+        'package_id', 'user_id', 'status', 'subscribed_at', 'expired_at',
     ];
 
     protected $dates = [

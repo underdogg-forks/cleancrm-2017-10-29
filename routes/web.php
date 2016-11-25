@@ -29,6 +29,7 @@ Route::group(
             'active',
             'auth',
             'theme:' . config('app.themes.admin.name') . ',' . config('app.themes.admin.layout'),
+            'subscription',
         ],
     ], function () {
         Route::get('dashboard', 'HomeController@index');
@@ -37,8 +38,12 @@ Route::group(
             Route::resource('users', 'UsersController');
         });
     });
+
 Route::group(['middleware' => []], function () {
     Route::resource('packages', 'PackageController');
+    Route::get('subscribe/{id}', 'PackageController@subscribe')->name('packages.subscribe');
+    Route::get('unsubscribed', 'PackageController@unsubscribed')->name('packages.unsubscribed');
+    Route::get('expired', 'PackageController@expired')->name('packages.expired');
 });
 // Handle Socialite Redirection & Callback
 Route::get('auth/facebook', 'Auth\AuthController@redirectToProvider');
