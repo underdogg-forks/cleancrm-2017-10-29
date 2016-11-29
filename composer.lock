@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "41921caba694d5484d6a1293c1e23226",
+    "hash": "0a9f9fed8c09b6447ec76d7eef7008ac",
     "content-hash": "81e7412e2a3e2d1efa9c2c888dcef728",
     "packages": [
         {
@@ -63,22 +63,22 @@
         },
         {
             "name": "cleaniquecoders/artisan-extended",
-            "version": "v1.0.4",
+            "version": "v1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cleaniquecoders/artisan-extended.git",
-                "reference": "ecc7ae7293d7a746084665cdaa56d9f88b84d1ef"
+                "reference": "fb3a000544661159396d000341dd9e4538db0660"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cleaniquecoders/artisan-extended/zipball/ecc7ae7293d7a746084665cdaa56d9f88b84d1ef",
-                "reference": "ecc7ae7293d7a746084665cdaa56d9f88b84d1ef",
+                "url": "https://api.github.com/repos/cleaniquecoders/artisan-extended/zipball/fb3a000544661159396d000341dd9e4538db0660",
+                "reference": "fb3a000544661159396d000341dd9e4538db0660",
                 "shasum": ""
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "CleaniqueCoders\\": "src/"
+                    "CleaniqueCoders\\ArtisanExtended\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -92,7 +92,7 @@
                 }
             ],
             "description": "Laravel Artisan Extended Commands",
-            "time": "2016-11-24 21:19:18"
+            "time": "2016-11-29 03:37:40"
         },
         {
             "name": "cleaniquecoders/setting",
