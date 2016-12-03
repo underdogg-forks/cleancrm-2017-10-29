@@ -1,5 +1,5 @@
 {
-    "name": "cleaniquecoders/web-app-boilerplate",
+    "name": "cleaniquecoders/splate",
     "description": "Web Application Boilerplate",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
@@ -52,9 +52,10 @@
             "php artisan key:generate",
             "php artisan jwt:generate",
             "php artisan clear:cache",
-            "php artisan splate:database",
-            "npm install",
-            "gulp"
+            "git init",
+            "git add .",
+            "git commit -m \"initial commit\"",
+            "php artisan splate:database"
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
