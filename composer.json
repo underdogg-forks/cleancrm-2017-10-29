@@ -52,10 +52,11 @@
             "php artisan key:generate",
             "php artisan jwt:generate",
             "php artisan clear:cache",
+            "rm -fr .git",
             "git init",
             "git add .",
             "git commit -m \"initial commit\"",
-            "php artisan splate:database"
+            "php artisan db:setup"
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
