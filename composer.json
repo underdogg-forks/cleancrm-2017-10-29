@@ -44,19 +44,17 @@
         ],
         "post-create-project-cmd": [
             "php artisan key:generate",
-            "php artisan clear:cache"
-        ],
-        "post-install-cmd": [
-            "php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "Illuminate\\Foundation\\ComposerScripts::postInstall",
-            "php artisan key:generate",
             "php artisan jwt:generate",
             "php artisan clear:cache",
+            "php artisan db:setup",
             "rm -fr .git",
             "git init",
             "git add .",
-            "git commit -m \"initial commit\"",
-            "php artisan db:setup"
+            "git commit -m \"initial commit\""
+        ],
+        "post-install-cmd": [
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "Illuminate\\Foundation\\ComposerScripts::postInstall"
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
