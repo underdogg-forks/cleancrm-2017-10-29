@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0a9f9fed8c09b6447ec76d7eef7008ac",
-    "content-hash": "81e7412e2a3e2d1efa9c2c888dcef728",
+    "hash": "c585dc21959b2eeed9d81094c3853e64",
+    "content-hash": "72cb7f50142a7fc598f04e0c74b90336",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -3479,36 +3479,6 @@
             "time": "2016-10-31 17:19:45"
         },
         {
-            "name": "nasrulhazim/clean",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nasrulhazim/clean.git",
-                "reference": "2d504b8931ff1c019ef288cd537431feff6460e2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nasrulhazim/clean/zipball/2d504b8931ff1c019ef288cd537431feff6460e2",
-                "reference": "2d504b8931ff1c019ef288cd537431feff6460e2",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "NasrulHazim\\Clean\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Nasrul Hazim",
-                    "email": "nasrulhazim.m@gmail.com"
-                }
-            ],
-            "description": "Clean up cache files",
-            "time": "2016-09-20 00:04:32"
-        },
-        {
             "name": "phpdocumentor/reflection-common",
             "version": "1.0",
             "source": {
@@ -4826,9 +4796,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "nasrulhazim/clean": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
