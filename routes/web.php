@@ -28,6 +28,7 @@ Route::group(
         'middleware' => [
             'active',
             'auth',
+            'subscription',
         ],
     ], function () {
 
