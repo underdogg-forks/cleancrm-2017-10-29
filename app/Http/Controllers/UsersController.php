@@ -1,10 +1,9 @@
 <?php
+namespace App\Http\Controllers;
 
-namespace Splate\Http\Controllers;
-
-use Splate\Role;
-use Splate\RoleUser;
-use Splate\User;
+use App\Role;
+use App\RoleUser;
+use App\User;
 use Auth;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 use Illuminate\Http\Request;
@@ -48,7 +47,7 @@ class UsersController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -68,7 +67,7 @@ class UsersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -80,7 +79,7 @@ class UsersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -93,8 +92,8 @@ class UsersController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -114,7 +113,7 @@ class UsersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -131,13 +130,10 @@ class UsersController extends Controller
     public function change(Request $request)
     {
         $password = $request->input('password');
-
         $user = Auth::user();
         $user->password = bcrypt($password);
         $user->save();
-
         session()->flash('message', 'You password has been update.');
-
         return redirect()->back();
     }
 }

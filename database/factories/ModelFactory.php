@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Model Factories
@@ -10,21 +9,18 @@
 | database. Just tell the factory how a default model should look.
 |
  */
-
-$factory->define(Splate\User::class, function (Faker\Generator $faker) {
+$factory->define(App\User::class, function (Faker\Generator $faker) {
     static $password;
-
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
-        'remember_token' => str_random(10),
+      'name' => $faker->name,
+      'email' => $faker->unique()->safeEmail,
+      'password' => $password ?: $password = bcrypt('secret'),
+      'remember_token' => str_random(10),
     ];
 });
-
-$factory->define(Splate\Profile::class, function (Faker\Generator $faker) {
+$factory->define(App\Profile::class, function (Faker\Generator $faker) {
     return [
-        'user_id' => $faker->randomElement(range(1, 100)),
-        'phone' => $faker->regexify('[0-9]{12}'),
+      'user_id' => $faker->randomElement(range(1, 100)),
+      'phone' => $faker->regexify('[0-9]{12}'),
     ];
 });

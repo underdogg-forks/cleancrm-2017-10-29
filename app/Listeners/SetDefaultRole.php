@@ -1,6 +1,5 @@
 <?php
-
-namespace Splate\Listeners;
+namespace App\Listeners;
 
 use Illuminate\Auth\Events;
 use Illuminate\Auth\Events\Registered;
@@ -20,12 +19,12 @@ class SetDefaultRole
     /**
      * Handle the event.
      *
-     * @param  IlluminateAuthEventsRegistered  $event
+     * @param  IlluminateAuthEventsRegistered $event
      * @return void
      */
     public function handle(Registered $event)
     {
-        $role = \Splate\Role::find(2);
+        $role = \App\Role::find(2);
         $event->user->attachRole($role);
     }
 }

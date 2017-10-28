@@ -1,6 +1,5 @@
 <?php
-
-namespace Splate\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -9,6 +8,7 @@ class SplateServiceProvider extends ServiceProvider
     protected $usesApi = true;
 
     protected $details = [];
+
     /**
      * Bootstrap the application services.
      *
@@ -17,10 +17,8 @@ class SplateServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->details = config('splate.owner');
-
         // set default packages
         // set default payment gateway
-
         // load up configuration
     }
 

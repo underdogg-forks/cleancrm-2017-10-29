@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,40 +14,34 @@ Route::group(['middleware' => 'theme:saas,frontend'], function () {
     Route::get('/', function (Request $request) {
         return view('welcome');
     });
-
     Route::get('/account/activate/{token}', 'AccountController@activate');
 });
-
 Route::group(['middleware' => ['theme:saas,frontend']], function () {
     Auth::routes();
 });
-
 Route::group(
-    [
+  [
+    'middleware' => [
+      'active',
+      'auth',
+        //'subscription',
+    ],
+  ], function () {
+    Route::group(
+      [
         'middleware' => [
-            'active',
-            'auth',
             //'subscription',
+          'theme:' . config('app.themes.admin.name') . ',' . config('app.themes.admin.layout'),
         ],
-    ], function () {
-
-        Route::group(
-            [
-                'middleware' => [
-                    //'subscription',
-                    'theme:' . config('app.themes.admin.name') . ',' . config('app.themes.admin.layout'),
-                ],
-            ], function () {
-                Route::get('dashboard', 'HomeController@index');
-            });
-
-        // Administrator, Trainer and Facilitator only
-        Route::group(['middleware' => ['role:administrator']], function () {
-            Route::resource('users', 'UsersController');
-            Route::resource('packages', 'PackageController');
-        });
+      ], function () {
+        Route::get('dashboard', 'HomeController@index');
     });
-
+    // Administrator, Trainer and Facilitator only
+    Route::group(['middleware' => ['role:administrator']], function () {
+        Route::resource('users', 'UsersController');
+        Route::resource('packages', 'PackageController');
+    });
+});
 Route::group(['middleware' => ['auth']], function () {
     Route::get('subscribe/{id}', 'PackageController@subscribe')->name('packages.subscribe');
     Route::get('unsubscribed', 'PackageController@unsubscribed')->name('packages.unsubscribed');

@@ -1,6 +1,5 @@
 <?php
-
-namespace Splate\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -1,19 +1,17 @@
 <?php
-
-namespace Splate\Http\Middleware;
+namespace App\Http\Middleware;
 
 use Auth;
 use Carbon\Carbon;
 use Closure;
-use Splate\PackageUser;
 
 class PackageSubscription
 {
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
+     * @param  \Illuminate\Http\Request $request
+     * @param  \Closure $next
      * @return mixed
      */
     public function handle($request, Closure $next)
@@ -31,7 +29,6 @@ class PackageSubscription
         if ($today->diffInSeconds($exist->expired_at, false) < 0) {
             return redirect()->route('packages.expired');
         }*/
-
         return $next($request);
     }
 }

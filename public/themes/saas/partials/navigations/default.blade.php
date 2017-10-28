@@ -22,7 +22,7 @@
                             </a>
                         </li>
                         @endforeach
-                        {{-- <li class="dropdown">
+                        <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="ti-bell"></i>
                                     <p class="notification">5</p>
@@ -42,7 +42,7 @@
                                 <i class="ti-settings"></i>
                                 <p>Settings</p>
                             </a>
-                        </li> --}}
+                        </li>
                     </ul>
 
                 </div>

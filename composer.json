@@ -16,27 +16,27 @@
   "prefer-stable": true,
   "require": {
     "php": ">=5.6.4",
-    "laravel/framework": "5.3.*",
+    "laravel/framework": "^5.3",
     "doctrine/dbal": "^2.5",
     "laravel/socialite": "^2.0",
-    "tymon/jwt-auth": "0.5.*",
-    "barryvdh/laravel-dompdf": "0.*",
-    "barryvdh/laravel-ide-helper": "2.3.*",
-    "cebe/markdown": "1.1.*",
+    "tymon/jwt-auth": "^0.5",
+    "barryvdh/laravel-dompdf": "^0.1",
+    "barryvdh/laravel-ide-helper": "^2.3",
+    "cebe/markdown": "^1.1",
     "laravie/html": "^5.3.0",
     "teepluss/theme": "^2.0",
-    "guzzlehttp/guzzle": "6.3.*",
-    "intervention/image": "2.3.*",
-    "jenssegers/date": "3.2.*",
-    "laracasts/flash": "3.0.*",
-    "kyslik/column-sortable": "5.4.*",
-    "nwidart/laravel-menus": "0.5.*",
-    "nwidart/laravel-modules": "1.*",
+    "guzzlehttp/guzzle": "^6.3",
+    "intervention/image": "^2.3",
+    "jenssegers/date": "^3.2",
+    "laracasts/flash": "^3.0",
+    "kyslik/column-sortable": "^5.1",
+    "nwidart/laravel-menus": "^0.5",
+    "nwidart/laravel-modules": "^1.13",
     "laravelcollective/html": "^5.3",
-    "sofa/eloquence": "5.4.*",
-    "tucker-eric/eloquentfilter": "1.1.*"
+    "sofa/eloquence": "^5.1",
+    "tucker-eric/eloquentfilter": "^1.1",
     "rtconner/laravel-tagging": "^2.2",
-    "santigarcor/laratrust": "3.0.*",
+    "santigarcor/laratrust": "^3.0",
     "thomaswelton/laravel-gravatar": "^1.0"
   },
   "require-dev": {
@@ -59,7 +59,7 @@
       "database"
     ],
     "psr-4": {
-      "Splate\\": "app/",
+      "App\\": "app/",
       "Modules\\": "Modules/"
     }
   },

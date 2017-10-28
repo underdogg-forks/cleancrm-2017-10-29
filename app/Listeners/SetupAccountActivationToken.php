@@ -1,10 +1,9 @@
 <?php
-
-namespace Splate\Listeners;
+namespace App\Listeners;
 
 use Illuminate\Auth\Events\Registered;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\InteractsWithQueue;
 
 class SetupAccountActivationToken
 {
@@ -21,15 +20,15 @@ class SetupAccountActivationToken
     /**
      * Handle the event.
      *
-     * @param  IlluminateAuthEventsRegistered  $event
+     * @param  IlluminateAuthEventsRegistered $event
      * @return void
      */
     public function handle(Registered $event)
     {
-        \Splate\UserToken::create([
-            'user_id' => $event->user->id,
-            'token' => str_random(64),
-            'status' => 0
+        \App\UserToken::create([
+          'user_id' => $event->user->id,
+          'token' => str_random(64),
+          'status' => 0
         ]);
     }
 }

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * This file is part of Laratrust,
  * a role & permission management solution for Laravel.
@@ -7,9 +6,7 @@
  * @license MIT
  * @package Laratrust
  */
-
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Laratrust Role Model
@@ -19,8 +16,7 @@ return [
     | the role if it is in a different namespace.
     |
      */
-    'role' => 'Splate\Role',
-
+  'role' => 'App\Role',
     /*
     |--------------------------------------------------------------------------
     | Laratrust Roles Table
@@ -29,8 +25,7 @@ return [
     | This is the roles table used by Laratrust to save roles to the database.
     |
      */
-    'roles_table' => 'roles',
-
+  'roles_table' => 'roles',
     /*
     |--------------------------------------------------------------------------
     | Laratrust Permission Model
@@ -40,8 +35,7 @@ return [
     | Update the permission if it is in a different namespace.
     |
      */
-    'permission' => 'Splate\Permission',
-
+  'permission' => 'App\Permission',
     /*
     |--------------------------------------------------------------------------
     | Laratrust Permissions Table
@@ -51,8 +45,7 @@ return [
     | database.
     |
      */
-    'permissions_table' => 'permissions',
-
+  'permissions_table' => 'permissions',
     /*
     |--------------------------------------------------------------------------
     | Laratrust permission_role Table
@@ -62,8 +55,7 @@ return [
     | between permissions and roles to the database.
     |
      */
-    'permission_role_table' => 'permission_role',
-
+  'permission_role_table' => 'permission_role',
     /*
     |--------------------------------------------------------------------------
     | Laratrust role_user Table
@@ -73,41 +65,36 @@ return [
     | database.
     |
      */
-    'role_user_table' => 'role_user',
-
+  'role_user_table' => 'role_user',
     /*
     |--------------------------------------------------------------------------
     | User Foreign key on Laratrust's role_user Table (Pivot)
     |--------------------------------------------------------------------------
      */
-    'user_foreign_key' => 'user_id',
-
+  'user_foreign_key' => 'user_id',
     /*
     |--------------------------------------------------------------------------
     | Role Foreign key on Laratrust's role_user and permission_role Tables (Pivot)
     |--------------------------------------------------------------------------
      */
-    'role_foreign_key' => 'role_id',
-
+  'role_foreign_key' => 'role_id',
     /*
     |--------------------------------------------------------------------------
     | Permission Foreign key on Laratrust's permission_role Table (Pivot)
     |--------------------------------------------------------------------------
      */
-    'permission_foreign_key' => 'permission_id',
-
+  'permission_foreign_key' => 'permission_id',
     /*
     |--------------------------------------------------------------------------
     | Method to be called in the middleware return case
     | Available: abort|redirect
     |--------------------------------------------------------------------------
      */
-    'middleware_handling' => 'abort',
-
+  'middleware_handling' => 'abort',
     /*
     |--------------------------------------------------------------------------
     | Parameter passed to the middleware_handling method
     |--------------------------------------------------------------------------
      */
-    'middleware_params' => '403',
+  'middleware_params' => '403',
 ];

@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -13,36 +12,28 @@ class LaratrustSeeder extends Seeder
     public function run()
     {
         $this->truncateLaratrustTables();
-
         $config = config('laratrust_seeder.role_structure');
         $mapPermission = collect(config('laratrust_seeder.permissions_map'));
         $faker = Faker\Factory::create();
-
         foreach ($config as $key => $modules) {
             // Create a new role
-            $role = \Splate\Role::create([
-                'name' => $key,
-                'display_name' => ucfirst($key),
-                'description' => ucfirst($key),
+            $role = \App\Role::create([
+              'name' => $key,
+              'display_name' => ucfirst($key),
+              'description' => ucfirst($key),
             ]);
-
             $this->command->info('Creating Role ' . strtoupper($key));
-
             // Reading role permission modules
             foreach ($modules as $module => $value) {
                 $permissions = explode(',', $value);
-
                 foreach ($permissions as $p => $perm) {
                     $permissionValue = $mapPermission->get($perm);
-
-                    $permission = \Splate\Permission::firstOrCreate([
-                        'name' => $module . '-' . $permissionValue,
-                        'display_name' => ucfirst($permissionValue) . ' ' . ucfirst($module),
-                        'description' => ucfirst($permissionValue) . ' ' . ucfirst($module),
+                    $permission = \App\Permission::firstOrCreate([
+                      'name' => $module . '-' . $permissionValue,
+                      'display_name' => ucfirst($permissionValue) . ' ' . ucfirst($module),
+                      'description' => ucfirst($permissionValue) . ' ' . ucfirst($module),
                     ]);
-
                     $this->command->info('Creating Permission to ' . $permissionValue . ' for ' . $module);
-
                     if (!$role->hasPermission($permission->name)) {
                         $role->attachPermission($permission);
                     } else {
@@ -50,22 +41,20 @@ class LaratrustSeeder extends Seeder
                     }
                 }
             }
-
             // Create default user for each role
-            $user = \Splate\User::create([
-                'name' => ucfirst($key),
-                'email' => $key . '@app.com',
-                'password' => bcrypt('password'),
-                'remember_token' => str_random(10),
+            $user = \App\User::create([
+              'name' => ucfirst($key),
+              'email' => $key . '@app.com',
+              'password' => bcrypt('password'),
+              'remember_token' => str_random(10),
             ]);
             $user->attachRole($role);
-
             // create total of 100 users
-            factory(\Splate\User::class, 96)->create()->each(function ($u) use ($role, $faker) {
+            factory(\App\User::class, 96)->create()->each(function ($u) use ($role, $faker) {
                 $u->attachRole($role);
-                \Splate\Profile::create([
-                    'user_id' => $u->id,
-                    'phone' => $faker->regexify('[0-9]{12}'),
+                \App\Profile::create([
+                  'user_id' => $u->id,
+                  'phone' => $faker->regexify('[0-9]{12}'),
                 ]);
             });
         }
@@ -80,11 +69,11 @@ class LaratrustSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         DB::table('permission_role')->truncate();
         DB::table('role_user')->truncate();
-        \Splate\User::truncate();
-        \Splate\Role::truncate();
-        \Splate\Permission::truncate();
-        \Splate\Profile::truncate();
-        \Splate\UserToken::truncate();
+        \App\User::truncate();
+        \App\Role::truncate();
+        \App\Permission::truncate();
+        \App\Profile::truncate();
+        \App\UserToken::truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }

@@ -1,8 +1,7 @@
 <?php
+namespace App\Http\Controllers\Auth;
 
-namespace Splate\Http\Controllers\Auth;
-
-use Splate\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -17,7 +16,6 @@ class LoginController extends Controller
     | to conveniently provide its functionality to your applications.
     |
      */
-
     use AuthenticatesUsers;
 
     /**

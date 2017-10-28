@@ -1,9 +1,8 @@
 <?php
+namespace App\Providers;
 
-namespace Splate\Providers;
-
-use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Event;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -13,12 +12,12 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Illuminate\Auth\Events\Registered' => [
-            'Splate\Listeners\SetDefaultRole',
-            'Splate\Listeners\SetupAccountActivationToken',
-            'Splate\Listeners\SendAccountActivation',
-            'Splate\Listeners\SendWelcomeNotification',
-        ],
+      'Illuminate\Auth\Events\Registered' => [
+        'App\Listeners\SetDefaultRole',
+        'App\Listeners\SetupAccountActivationToken',
+        'App\Listeners\SendAccountActivation',
+        'App\Listeners\SendWelcomeNotification',
+      ],
     ];
 
     /**

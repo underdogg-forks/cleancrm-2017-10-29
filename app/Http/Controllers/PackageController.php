@@ -1,12 +1,11 @@
 <?php
+namespace App\Http\Controllers;
 
-namespace Splate\Http\Controllers;
-
+use App\Package;
+use App\PackageUser;
 use Auth;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Splate\Package;
-use Splate\PackageUser;
 
 class PackageController extends Controller
 {
@@ -35,7 +34,7 @@ class PackageController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -47,7 +46,7 @@ class PackageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -59,7 +58,7 @@ class PackageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -71,8 +70,8 @@ class PackageController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -84,7 +83,7 @@ class PackageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -107,15 +106,13 @@ class PackageController extends Controller
         $package = Package::find($id);
         $subscribed_at = Carbon::now();
         $type = $package->type;
-
         $packageUser = PackageUser::create([
-            'package_id' => $package->id,
-            'user_id' => Auth::user()->id,
-            'status' => 1,
-            'subscribed_at' => Carbon::now(),
-            'expired_at' => ($type == 0) ? $subscribed_at->addMonths($package->duration) : $subscribed_at->addYears($package->duration),
+          'package_id' => $package->id,
+          'user_id' => Auth::user()->id,
+          'status' => 1,
+          'subscribed_at' => Carbon::now(),
+          'expired_at' => ($type == 0) ? $subscribed_at->addMonths($package->duration) : $subscribed_at->addYears($package->duration),
         ]);
-
         return $packageUser;
     }
 

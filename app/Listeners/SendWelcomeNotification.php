@@ -1,10 +1,9 @@
 <?php
-
-namespace Splate\Listeners;
+namespace App\Listeners;
 
 use Illuminate\Auth\Events\Registered;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\InteractsWithQueue;
 
 class SendWelcomeNotification
 {
@@ -21,11 +20,11 @@ class SendWelcomeNotification
     /**
      * Handle the event.
      *
-     * @param  IlluminateAuthEventsRegistered  $event
+     * @param  IlluminateAuthEventsRegistered $event
      * @return void
      */
     public function handle(Registered $event)
     {
-         $event->user->notify(new \Splate\Notifications\Welcome($event->user));
+        $event->user->notify(new \App\Notifications\Welcome($event->user));
     }
 }

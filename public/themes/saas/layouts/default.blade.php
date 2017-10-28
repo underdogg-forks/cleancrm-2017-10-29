@@ -30,7 +30,15 @@
     <link href="{{ url('themes/saas/assets/css/themify-icons.css') }}" rel="stylesheet">
 
     {!! Theme::asset()->styles() !!}
-
+    <link href="{{ url('/css/font-awesome.css') }}" rel="stylesheet">
+    <style type="text/css">
+        .main-panel {
+            width: calc(100% - 0px);
+        }
+        .navbar-brand, h1,h2,h3,h4,h5,h6 {
+            color: #CC0000 !important;
+        }
+    </style>
 </head>
 <body>
         <div class="wrapper">
@@ -55,7 +63,6 @@
             <div class="main-panel">
 
                 {!! Theme::partial('navigations.default') !!}
-
 
                 <div class="content">
                     <div class="container-fluid">
