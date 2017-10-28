@@ -28,14 +28,14 @@ Route::group(
         'middleware' => [
             'active',
             'auth',
-            'subscription',
+            //'subscription',
         ],
     ], function () {
 
         Route::group(
             [
                 'middleware' => [
-                    'subscription',
+                    //'subscription',
                     'theme:' . config('app.themes.admin.name') . ',' . config('app.themes.admin.layout'),
                 ],
             ], function () {

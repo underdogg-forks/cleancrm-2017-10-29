@@ -59,6 +59,6 @@ class Kernel extends HttpKernel
         'jwt.auth' => \Tymon\JWTAuth\Middleware\GetUserFromToken::class,
         'jwt.refresh' => \Tymon\JWTAuth\Middleware\RefreshToken::class,
         'theme' => \Splate\Http\Middleware\ThemeLoader::class,
-        'subscription' => \Splate\Http\Middleware\PackageSubscription::class,
+        //'subscription' => \Splate\Http\Middleware\PackageSubscription::class,
     ];
 }

@@ -18,7 +18,7 @@ class PackageSubscription
      */
     public function handle($request, Closure $next)
     {
-        $exist = PackageUser::where('status', 1)
+        /*$exist = PackageUser::where('status', 1)
             ->where('user_id', Auth::user()->id)->first();
 
         if (empty($exist)) {
@@ -30,7 +30,7 @@ class PackageSubscription
 
         if ($today->diffInSeconds($exist->expired_at, false) < 0) {
             return redirect()->route('packages.expired');
-        }
+        }*/
 
         return $next($request);
     }

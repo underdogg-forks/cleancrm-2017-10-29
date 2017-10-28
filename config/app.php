@@ -185,8 +185,8 @@ return [
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Teepluss\Theme\ThemeServiceProvider::class,
-        CleaniqueCoders\ArtisanExtended\ArtisanExtendedServiceProvider::class,
-        CleaniqueCoders\Providers\SettingServiceProvider::class,
+        //CleaniqueCoders\ArtisanExtended\ArtisanExtendedServiceProvider::class,
+        //CleaniqueCoders\Providers\SettingServiceProvider::class,
         /*
          * Application Service Providers...
          */
