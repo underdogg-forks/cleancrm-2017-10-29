@@ -1,0 +1,41 @@
+  - Removing psy/psysh (v0.8.13)
+  - Removing classpreloader/classpreloader (3.1.0)
+  - Removing jeremeamia/superclosure (2.3.0)
+  - Removing dnoegel/php-xdg-base-dir (0.1)
+  - Removing jakub-onderka/php-console-highlighter (v0.3.2)
+  - Removing jakub-onderka/php-console-color (0.1)
+  - Installing tijsverkoyen/css-to-inline-styles (2.2.0) Loading from cache
+  - Updating symfony/var-dumper (v3.1.10 => v3.3.10) Loading from cache
+  - Updating symfony/routing (v3.1.10 => v3.3.10) Loading from cache
+  - Updating symfony/process (v3.1.10 => v3.3.10) Loading from cache
+  - Updating symfony/debug (v3.1.10 => v3.3.10) Loading from cache
+  - Updating symfony/http-foundation (v3.1.10 => v3.3.10) Loading from cache
+  - Updating symfony/http-kernel (v3.1.10 => v3.3.10) Loading from cache
+  - Updating symfony/finder (v3.1.10 => v3.3.10) Loading from cache
+  - Updating symfony/console (v3.1.10 => v3.3.10) Loading from cache
+  - Installing egulias/email-validator (2.1.2) Loading from cache
+  - Updating swiftmailer/swiftmailer (v5.4.8 => v6.0.2) Loading from cache
+  - Installing psr/simple-cache (1.0.0) Loading from cache
+  - Installing psr/container (1.0.0) Loading from cache
+  - Updating symfony/translation (v3.1.10 => v3.3.10) Loading from cache
+  - Installing erusev/parsedown (1.6.3) Loading from cache
+  - Updating laravel/framework (v5.3.31 => v5.5.19) Downloading: 100%
+  - Updating laravie/html (v5.3.2 => v5.5.0) Downloading: 100%
+  - Updating santigarcor/laratrust (3.0.13 => 3.2.4) Downloading: 100%
+  - Installing symfony/class-loader (v3.3.10) Loading from cache
+  - Installing barryvdh/reflection-docblock (v2.0.4) Loading from cache
+  - Installing barryvdh/laravel-ide-helper (v2.4.1) Loading from cache
+  - Installing cebe/markdown (1.1.2) Loading from cache
+  - Installing intervention/image (2.4.1) Loading from cache
+  - Installing jenssegers/date (v3.2.12) Loading from cache
+  - Installing laracasts/flash (3.0.2) Loading from cache
+  - Installing kyslik/column-sortable (5.5.2) Downloading: 100%
+  - Installing nwidart/laravel-modules (1.27.2) Loading from cache
+  - Installing sofa/hookable (v5.5) Downloading: 100%
+  - Installing sofa/eloquence-base (v5.5) Downloading: 100%
+  - Installing sofa/eloquence-validable (v5.5) Downloading: 100%
+  - Installing sofa/eloquence-mutable (v5.5.1) Downloading: 100%
+  - Installing sofa/eloquence-metable (v5.5) Downloading: 100%
+  - Installing sofa/eloquence-mappable (v5.5.1) Downloading: 100%
+  - Installing sofa/eloquence (v5.5.1) Downloading: 100%
+  - Installing tucker-eric/eloquentfilter (1.2.0) Downloading: 100%

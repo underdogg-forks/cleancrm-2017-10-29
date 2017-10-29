@@ -1,0 +1,28 @@
+
+
+    "barryvdh/laravel-ide-helper": "^2.3",
+    "cebe/markdown": "^1.1",
+"doctrine/dbal": "^2.6",
+
+"fzaninotto/faker": "^1.7.1",
+"guzzlehttp/guzzle": "^6.3",
+    "intervention/image": "^2.3",
+    "jenssegers/date": "^3.2",
+"jeremeamia/superclosure": "^2.3.0",
+"kyslik/column-sortable": "^5.1",
+"laracasts/flash": "^3.0",
+"laravel/framework": "^5.3",
+"laravel/socialite": "^2.0",
+"laravelcollective/html": "^5.3",
+"laravie/html": "^5.3",
+"nwidart/laravel-modules": "^1.13",
+"rtconner/laravel-tagging": "^2.2",
+"santigarcor/laratrust": "^3.0",
+"sofa/eloquence": "^5.1",
+"teepluss/theme": "^2.0",
+"thomaswelton/laravel-gravatar": "^1.0",
+"tucker-eric/eloquentfilter": "^1.1",
+"tymon/jwt-auth": "^0.5"
+
+
+

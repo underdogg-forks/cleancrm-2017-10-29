@@ -8,7 +8,7 @@
   "license": "MIT",
   "type": "project",
   "config": {
-    "preferred-install": "dist",
+    "preferred-install": "dev",
     "sort-packages": true,
     "optimize-autoloader": true
   },
@@ -16,36 +16,35 @@
   "prefer-stable": true,
   "require": {
     "php": ">=5.6.4",
-    "laravel/framework": "^5.3",
-    "doctrine/dbal": "^2.5",
-    "laravel/socialite": "^2.0",
-    "tymon/jwt-auth": "^0.5",
-    "barryvdh/laravel-dompdf": "^0.1",
     "barryvdh/laravel-ide-helper": "^2.3",
     "cebe/markdown": "^1.1",
-    "laravie/html": "^5.3.0",
-    "teepluss/theme": "^2.0",
+    "doctrine/dbal": "^2.6",
     "guzzlehttp/guzzle": "^6.3",
     "intervention/image": "^2.3",
     "jenssegers/date": "^3.2",
-    "laracasts/flash": "^3.0",
+    "jeremeamia/superclosure": "^2.0",
     "kyslik/column-sortable": "^5.1",
-    "nwidart/laravel-menus": "^0.5",
-    "nwidart/laravel-modules": "^1.13",
+    "laracasts/flash": "^3.0",
+    "laravel/framework": "^5.3",
+    "laravel/socialite": "^2.0",
     "laravelcollective/html": "^5.3",
-    "sofa/eloquence": "^5.1",
-    "tucker-eric/eloquentfilter": "^1.1",
+    "laravie/html": "^5.3",
+    "nwidart/laravel-modules": "^1.13",
     "rtconner/laravel-tagging": "^2.2",
     "santigarcor/laratrust": "^3.0",
-    "thomaswelton/laravel-gravatar": "^1.0"
+    "sofa/eloquence": "^5.1",
+    "teepluss/theme": "^2.0",
+    "thomaswelton/laravel-gravatar": "^1.0",
+    "tucker-eric/eloquentfilter": "^1.1",
+    "tymon/jwt-auth": "^0.5"
   },
   "require-dev": {
-    "fzaninotto/faker": "^1.4",
+    "fzaninotto/faker": "^1.7",
     "mockery/mockery": "^0.9",
     "phpunit/phpunit": "^5.0",
     "symfony/css-selector": "3.1.*",
     "symfony/dom-crawler": "3.1.*",
-    "maddhatter/laravel-view-generator": "^0.0.3"
+    "maddhatter/laravel-view-generator": "^0.3"
   },
   "extra": {
     "merge-plugin": {

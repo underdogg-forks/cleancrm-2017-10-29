@@ -1,5 +1,5 @@
 <?php
-$serializer = new SuperClosure\Serializer;
+//$serializer = new SuperClosure\Serializer;
 return array(
     /*
     |--------------------------------------------------------------------------
@@ -78,24 +78,24 @@ return array(
      */
   'events' => array(
       // Before all event, this event will effect for global.
-    'before' => $serializer->serialize(function ($theme) {
-        //$theme->setTitle('Something in global.');
-    }),
-      // This event will fire as a global you can add any assets you want here.
-    'asset' => $serializer->serialize(function ($asset) {
-        // Preparing asset you need to serve after.
-        // $asset->cook('backbone', function($asset)
-        // {
-        //     $asset->add('backbone', '//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js');
-        //     $asset->add('underscorejs', '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js');
-        // });
-        // To use cook 'backbone' you can fire with 'serve' method.
-        // Theme::asset()->serve('backbone');
-        $asset->cook('delete', function () {
-            $asset->add('delete-helper', url('js/delete.js'));
-        });
-        Theme::asset()->serve('delete');
-    }),
+      /*'before' => $serializer->serialize(function ($theme) {
+          //$theme->setTitle('Something in global.');
+      }),
+        // This event will fire as a global you can add any assets you want here.
+      'asset' => $serializer->serialize(function ($asset) {
+          // Preparing asset you need to serve after.
+          // $asset->cook('backbone', function($asset)
+          // {
+          //     $asset->add('backbone', '//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js');
+          //     $asset->add('underscorejs', '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js');
+          // });
+          // To use cook 'backbone' you can fire with 'serve' method.
+          // Theme::asset()->serve('backbone');
+          $asset->cook('delete', function () {
+              $asset->add('delete-helper', url('js/delete.js'));
+          });
+          Theme::asset()->serve('delete');
+      }),*/
   ),
     /*
     |--------------------------------------------------------------------------
@@ -126,18 +126,14 @@ return array(
       ),
         // This is laravel alias to allow in twig compiler
         // The list all of methods is at /app/config/app.php
-      'hooks' => $serializer->serialize(function ($twig) {
+      /*'hooks' => $serializer->serialize(function ($twig) {
           // Example add funciton name "demo".
-          /*$function = new Twig_SimpleFunction('example', function()
-          {
-          $args = func_get_args();
-
-          return "Example" . print_r($args, true);
+          $function = new Twig_SimpleFunction('example', function () {
+              $args = func_get_args();
+              return "Example" . print_r($args, true);
           });
-
-          $twig->addFunction($function);*/
-          return $twig;
-      }),
+          $twig->addFunction($function);
+      }),*/
     ),
   ),
 );
